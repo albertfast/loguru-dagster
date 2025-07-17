@@ -75,10 +75,22 @@ def with_loguru_logger(fn):
     This is the recommended way to integrate Loguru with Dagster.
     """
     @wraps(fn)
-    def wrapper(context, *args, **kwargs):
+    def wrapper(self_or_context, *args, **kwargs):
+        # If first argument is an instance with get_context method, use that
+        if hasattr(self_or_context, 'get_context'):
+            context = self_or_context.get_context()
+            instance = self_or_context
+        else:
+            # Otherwise assume the first argument is the context
+            context = self_or_context
+            instance = None
+
         handler_id = logger.add(dagster_context_sink(context), level="DEBUG")
         try:
-            result = fn(context, *args, **kwargs)
+            if instance:
+                result = fn(instance, *args, **kwargs)
+            else:
+                result = fn(context, *args, **kwargs)
         finally:
             logger.remove(handler_id)
         return result
