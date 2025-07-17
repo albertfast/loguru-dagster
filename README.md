@@ -22,7 +22,6 @@ from loguru_dagster import dagster_context_sink, with_loguru_logger
 ```python
 from loguru import logger
 from loguru_dagster import dagster_context_sink, with_loguru_logger
-import dagster as dg
 
 @dg.asset
 @with_loguru_logger

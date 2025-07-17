@@ -12,6 +12,11 @@ setup(
         "dagster>=1.0.0",
         "loguru>=0.7.0"
     ],
+    entry_points={
+        "console_scripts": [
+            "loguru-dagster=loguru_dagster.cli:main",
+        ],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
