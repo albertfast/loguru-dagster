@@ -11,3 +11,4 @@ build/
 __pycache__/
 
 .pypirc
+/loguru-dagster/dist/.pypirc
