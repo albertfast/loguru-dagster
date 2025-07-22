@@ -1,2 +1,6 @@
 loguru_dagster.egg-info/
+.venv
 venv/
+
+.env*  
+!.env.example  
