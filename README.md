@@ -39,6 +39,7 @@ defs = dg.Definitions(
     assets=[test_loguru_html_log]
 )
 ```
+![Loguru Direct Logging](./images/test_loguru_html_log.png)
 
 2.Bridge Loguru to context.log with Decorator
 To convert context.log calls into Loguru logs, use the decorator @with_loguru_logger from loguru_dagster:
@@ -60,6 +61,8 @@ defs = dg.Definitions(
     assets=[my_contexlog_callig_loguru]
 )
 ```
+
+![Loguru Context Log Bridge](./images/my_contexlog_callig_loguru.png)
 
 ## 🔗 Repository
 
