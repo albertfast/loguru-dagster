@@ -47,7 +47,7 @@ To convert context.log calls into Loguru logs, use the decorator @with_loguru_lo
 
 ```python
 import dagster as dg
-from loguru_bridge import with_loguru_logger
+from loguru_dagster import with_loguru_logger
 
 @dg.asset
 @with_loguru_logger
