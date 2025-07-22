@@ -18,7 +18,7 @@ if root_dir not in sys.path:
     sys.path.insert(0, root_dir)
     
 # Import bridge components
-from loguru_dagster import dagster_context_sink, with_loguru_logger
+from loguru_dagster.bridge import dagster_context_sink, with_loguru_logger
 # Setup Buildkite environment variables for testing
 def setup_buildkite_environment():
     """Setup meaningful test environment variables for Buildkite integration."""

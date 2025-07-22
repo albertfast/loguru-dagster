@@ -4,3 +4,8 @@ venv/
 
 .env*  
 !.env.example  
+
+*.egg-info/
+dist/
+build/
+__pycache__/
