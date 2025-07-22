@@ -39,6 +39,7 @@ defs = dg.Definitions(
     assets=[test_loguru_html_log]
 )
 ```
+
 ![Loguru Direct Logging](./images/test_loguru_html_log.png)
 
 2.Bridge Loguru to context.log with Decorator

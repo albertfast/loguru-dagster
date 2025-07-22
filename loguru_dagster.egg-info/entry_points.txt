@@ -1,2 +1,0 @@
-[console_scripts]
-loguru-dagster = loguru_dagster.cli:main
