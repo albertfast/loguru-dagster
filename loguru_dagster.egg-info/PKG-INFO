@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: loguru-dagster
-Version: 0.1.5
+Version: 0.1.6
 Summary: A bridge to integrate Loguru logging with Dagster context.log.
 Author-email: Ahmet Sahiner <ahmethasimsahiner@gmail.com>
 License-Expression: MIT
